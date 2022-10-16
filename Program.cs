@@ -155,9 +155,49 @@ void PrintArray3x3(int[,,]array3x3){
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-int[,] array1 = GetArray(6, 4, 0, 9);
-PrintArray(array1);
+// int[,] array1 = GetArray(6, 4, 0, 9);
+// PrintArray(array1);
+// Console.WriteLine();
+// int stringIndex = MinStringSum(array1);
+// Console.WriteLine($"Индекс минимальной суммы строки на программистском: {stringIndex}");
+// Console.WriteLine($"На человеческом: {stringIndex - 1}");
+
+// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
+// Console.WriteLine("Введите количество строк первой матрицы ");
+// int row0 = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите количество столбцов первой матрицы ");
+// int col0 = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите количество строк второй матрицы ");
+// int row1 = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите количество столбцов второй матрицы ");
+// int col1 = int.Parse(Console.ReadLine()!);
+// if(col0!=row1){
+// 	Console.WriteLine("Матрицы невозможно перемножить(Правила умножения матриц: количество столбцов первой матрицы = количество строк второй матрицы");
+// }
+// else
+// {
+//     int[,] matrix0 = GetArray(row0, col0, 1, 9);
+//     int[,] matrix1 = GetArray(row1, col1, 1, 9);
+//     PrintArray(matrix0);
+// 	Console.WriteLine();
+//     PrintArray(matrix1);
+// 	Console.WriteLine();
+// 	int[,] matrixsolv = MatrixSolution(matrix0, matrix1);
+//     PrintArray(matrixsolv);
+// }
+
+// кароче я не знаю как рассмотреть общий случай, там выше описано, но я не понимаю что там не так
+int[,] matrix0 = GetArray(2, 2, 1, 9);
+int[,] matrix1 = GetArray(2, 2, 1, 9);
+PrintArray(matrix0);
 Console.WriteLine();
-int stringIndex = MinStringSum(array1);
-Console.WriteLine($"Индекс минимальной суммы строки на программистском: {stringIndex}");
-Console.WriteLine($"На человеческом: {stringIndex - 1}");
+PrintArray(matrix1);
+int[,] matrixSolution = MatrixSolved(matrix0, matrix1);
+Console.WriteLine();
+PrintArray(matrixSolution);
