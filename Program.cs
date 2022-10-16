@@ -193,11 +193,21 @@ void PrintArray3x3(int[,,]array3x3){
 // }
 
 // кароче я не знаю как рассмотреть общий случай, там выше описано, но я не понимаю что там не так
-int[,] matrix0 = GetArray(2, 2, 1, 9);
-int[,] matrix1 = GetArray(2, 2, 1, 9);
-PrintArray(matrix0);
-Console.WriteLine();
-PrintArray(matrix1);
-int[,] matrixSolution = MatrixSolved(matrix0, matrix1);
-Console.WriteLine();
-PrintArray(matrixSolution);
+// int[,] matrix0 = GetArray(2, 2, 1, 9);
+// int[,] matrix1 = GetArray(2, 2, 1, 9);
+// PrintArray(matrix0);
+// Console.WriteLine();
+// PrintArray(matrix1);
+// int[,] matrixSolution = MatrixSolved(matrix0, matrix1);
+// Console.WriteLine();
+// PrintArray(matrixSolution);
+
+// Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
+
+int[,,] arrayCube = GetArray3x3(3, 3, 3);
+PrintArray3x3(arrayCube);
