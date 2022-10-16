@@ -209,5 +209,57 @@ void PrintArray3x3(int[,,]array3x3){
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-int[,,] arrayCube = GetArray3x3(3, 3, 3);
-PrintArray3x3(arrayCube);
+// int[,,] arrayCube = GetArray3x3(3, 3, 3);
+// PrintArray3x3(arrayCube);
+
+// Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+// 01 02 03 04
+// 12 13 14 05
+// 11 16 15 06
+// 10 09 08 07
+
+int[,] myArray = new int[4,4];
+int i = 0;
+int next = 1;
+int j = 0;
+for(; j < myArray.GetLength(1); j++){
+    myArray[i,j] = next;
+    next++;
+}
+while(i<myArray.GetLength(0)){
+    j = myArray.GetLength(1)- 1;
+    myArray[i,j] = next - 1;
+    next++;
+    i++;
+}
+j-=1;
+while (j >= 0)
+{
+    i = myArray.GetLength(0) - 1;
+    myArray[i, j] = next - 1;
+    next++;
+    j--;
+}
+i-=1;
+while(i>0){
+    j = 0;
+    myArray[i,j] = next - 1;
+    next++;
+    i--;
+}
+i++;
+j++;
+next--;
+myArray[i,j] = next;
+next++;
+j++;
+myArray[i,j] = next;
+next++;
+i++;
+myArray[i,j] = next;
+next++;
+j--;
+myArray[i,j] = next;
+next++;
+PrintArray(myArray);
